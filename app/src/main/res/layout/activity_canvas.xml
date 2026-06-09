@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F0">
+
+    <!-- Top Toolbar -->
+    <LinearLayout
+        android:id="@+id/topToolbar"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton android:id="@+id/btnUndo"
+            android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_undo" android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Undo"/>
+
+        <ImageButton android:id="@+id/btnRedo"
+            android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_redo" android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Redo"/>
+
+        <View android:layout_width="1dp" android:layout_height="32dp"
+            android:background="#E0E0E0" android:layout_marginHorizontal="4dp"/>
+
+        <ImageButton android:id="@+id/btnPrevPage"
+            android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_back" android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Previous page"/>
+
+        <TextView android:id="@+id/tvPageNumber"
+            android:layout_width="60dp" android:layout_height="wrap_content"
+            android:textAlignment="center" android:textSize="13sp" android:text="1 / 1"/>
+
+        <ImageButton android:id="@+id/btnNextPage"
+            android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_forward" android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Next page"/>
+
+        <ImageButton android:id="@+id/btnAddPage"
+            android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_add_page" android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Add page"/>
+
+        <View android:layout_width="1dp" android:layout_height="32dp"
+            android:background="#E0E0E0" android:layout_marginHorizontal="4dp"/>
+
+        <ImageButton android:id="@+id/btnOcr"
+            android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_ocr" android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Recognize handwriting"/>
+
+        <ImageButton android:id="@+id/btnFont"
+            android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_font" android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Load custom font"/>
+
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+        <ImageButton android:id="@+id/btnExport"
+            android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_export" android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Export PDF"/>
+
+    </LinearLayout>
+
+    <!-- Left Tool Panel -->
+    <LinearLayout
+        android:id="@+id/leftPanel"
+        android:layout_width="56dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:gravity="center_horizontal"
+        android:paddingVertical="8dp"
+        app:layout_constraintTop_toBottomOf="@id/topToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Pen options button -->
+        <ImageButton android:id="@+id/btnPenOptions"
+            android:layout_width="44dp" android:layout_height="44dp"
+            android:src="@drawable/ic_pen_options" android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Pen options"/>
+
+        <ImageButton android:id="@+id/btnToolPen"
+            android:layout_width="44dp" android:layout_height="44dp"
+            android:src="@drawable/ic_pen" android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Pen"/>
+
+        <ImageButton android:id="@+id/btnToolEraser"
+            android:layout_width="44dp" android:layout_height="44dp"
+            android:src="@drawable/ic_eraser" android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Eraser"/>
+
+        <ImageButton android:id="@+id/btnToolLasso"
+            android:layout_width="44dp" android:layout_height="44dp"
+            android:src="@drawable/ic_lasso" android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Lasso"/>
+
+        <View android:layout_width="40dp" android:layout_height="1dp"
+            android:background="#E0E0E0" android:layout_marginVertical="4dp"/>
+
+        <!-- Color button -->
+        <View android:id="@+id/btnColor"
+            android:layout_width="32dp" android:layout_height="32dp"
+            android:background="#000000"
+            android:layout_marginTop="4dp"/>
+
+        <View android:layout_width="40dp" android:layout_height="1dp"
+            android:background="#E0E0E0" android:layout_marginVertical="8dp"/>
+
+        <!-- Text insert -->
+        <ImageButton android:id="@+id/btnInsertText"
+            android:layout_width="44dp" android:layout_height="44dp"
+            android:src="@drawable/ic_text" android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Insert text"/>
+
+        <!-- Image insert -->
+        <ImageButton android:id="@+id/btnInsertImage"
+            android:layout_width="44dp" android:layout_height="44dp"
+            android:src="@drawable/ic_image" android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Insert image"/>
+
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+        <!-- Stroke width slider (vertical) -->
+        <com.google.android.material.slider.Slider
+            android:id="@+id/strokeSlider"
+            android:layout_width="44dp"
+            android:layout_height="120dp"
+            android:rotation="270"
+            android:valueFrom="1"
+            android:valueTo="30"
+            android:value="4"
+            android:stepSize="1"/>
+
+    </LinearLayout>
+
+    <!-- Lasso actions bar (hidden by default) -->
+    <LinearLayout
+        android:id="@+id/lassoActions"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="#FF5252"
+        android:visibility="gone"
+        android:elevation="6dp"
+        app:layout_constraintTop_toBottomOf="@id/topToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp">
+
+        <Button android:id="@+id/btnLassoDelete"
+            android:layout_width="wrap_content" android:layout_height="match_parent"
+            android:text="Delete" android:textColor="#FFFFFF"
+            style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+    </LinearLayout>
+
+    <!-- Canvas area -->
+    <FrameLayout
+        android:id="@+id/canvasFrame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/topToolbar"
+        app:layout_constraintStart_toEndOf="@id/leftPanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.diarynote.ui.canvas.DrawingCanvas
+            android:id="@+id/drawingCanvas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.diarynote.ui.canvas.TextOverlayView
+            android:id="@+id/textOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
